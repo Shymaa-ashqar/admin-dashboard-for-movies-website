@@ -25,3 +25,7 @@ Route::get('/movies/create', [MovieController::class, 'create'])->name('movies.c
 Route::get('/movies/edit/{movie}', [MovieController::class, 'edit']);
 Route::put('/movies/{movie}', [MovieController::class, 'update']);
 Route::delete('/movies/{movie}', [MovieController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
